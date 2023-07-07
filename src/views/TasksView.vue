@@ -45,7 +45,7 @@ function edit(newText, qkey) {
       
       <ul v-if="Tasks.getCount > 0" class="tasks__list">
         <li v-for="task,i in Tasks.tasks" :key="i" class="task flex items-center">
-          <span class="task__text">{{ task.key }} |  {{ task.text }}</span>
+          <span class="task__text">{{ task.text }}</span>
           <button class="task__btn" @click="Tasks.removeTask(task.key)">Удалить</button>
           <button class="task__btn task__btn_edit" @click="beforeEdit(task.text, task.key)">Изменить</button>
         </li>
